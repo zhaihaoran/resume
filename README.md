@@ -1,0 +1,89 @@
+# 联系方式
+
+- 手机：13552232913 
+- Email：zhaihaoran@iqidao.com 
+- 微信号：zhai359118915
+- QQ：359118915
+
+---
+
+# 个人信息
+
+ - 翟浩然/男/1992 
+ - 本科/中国农业大学(985)
+ - 工作年限：2年
+ - Github：http://github.com/zhaihaoran
+ - 期望职位：Javascript初中级前端工程师,NodeJS初中级后端工程师
+ - 期望城市：北京，杭州
+
+---
+
+# 工作经历
+
+### [爱棋道文化传播有限公司](http://www.iqidao.com) - 2016年2月~~至今
+
+#### 运营后台前端架构设计实现  -- [爱棋道 | 管理后台](http://www.iqidao.com/admin001/)
+
+##### 基本介绍
+
+* 运营后台面向所有的运营、教务、客服等工作人员使用，业务涵盖了所有产品相关的支持，包括课程、活动、用户、试卷、题库等方面。具体功能点包含了基本的信息展示、增删该查、权限管理、数据可视化、视频文档和课件上传、新闻专栏富文本编辑等。
+* 后台前端采用的是传统多页面技术方案，易于上手。核心技术栈为 RequireJs + ES5 + Gulp + Less + Documentation + 第三方开源组件等，兼容IE9+，Firefox，Chrome，支持移动端适配。
+
+##### 技术特色
+
+* 基于History + Ajax自制pjax组件,在列表查询页中配合分页实现了局域异步刷新，Ajax缓存,极大提升了用户体验;
+* js方面,基于AMD模块化开发,多页面通用组件统一声明,自制工具类util,二次封装组件等工作以支持页面js的工作,抽象度较高,逻辑结构清晰。
+* 高度集成了各种第三方开源组件并进行二次封装确保正常，具体包含富文本编辑（froalaEditor），远程下拉框（select2），日期选择（datetimepicker）等等
+* 缓存策略方面采用长期cache同时结合依赖文件添加版本号来确保网页性能和线上及时更新，对前端性能优化有一定了解;
+* js严格遵循eslint要求、代码风格为面向对象、模块化开发;驼峰命名变量;熟练掌握注释语法以确保Documentation正常生成js接口文档。
+* 后端方面,采用 golang + iris + mysql,熟练使用go语言进行路由编写，部分接口编写；熟练掌握sql、mysql进行数据库增删该查方便进行调试。
+
+#### 落地页、活动页设计以及实现 -- [快速涨棋，突破瓶颈](http://www.iqidao.com/html/baidu/index.html)
+
+* 技术方面主要基于Bootstrap + Less实现静态页面。所有的landingpage均为响应式，兼容IE9+ ，代码命名符合规范。 
+* 完全满足UI设计稿的设计细节，部分活动页由于时间紧迫，自行设计绘制草稿并按时上线，同事领导对于成品非常满意。
+* JS方面自制封装SignModal组件，逻辑包含了部分register、login、validate逻辑，实现多页面复用。
+* JS代码风格为基于prototype原型链的面向对象写法。命名语义化，格式清晰，完全通过JSLint校验。
+
+---
+
+# 其他兴趣作品 
+
+#### 数独小游戏  -- [数独游戏](https://zhaihaoran.github.io/sudoku/)
+
+* 该博客主要为自学与尝试，目前尚未搭建完备，目的为了熟悉nodejs相关api和express框架，后端流程
+* microblog 基于NodeJs + Express  + MongoDB 实现 ，前端基于RequireJS + gulp + Materialize + less 实现
+* microblog搭建过程从数据库到前端模板渲染，对整个网站实现有一定的理解和经验。
+* 博客功能包括了基本的登陆注册退出机制，验证码处理，权限管理，Session处理，form文件上传处理，发表修改删除博客，统计PV数据，游客评论功能，个人信息修改包含了设置头像等。博客内容编辑支持markdown语法转义，评论支持emoji表情输入。
+
+#### 小项目实现
+
+* 自制封装jQuery插件 -- `src/js/lib/`
+* 俄罗斯方块小游戏的js实现 --`src/js/terris.js` [demo](https://zhaihaoran.github.io/resume_page/demo/terris.html)
+* 移动端手势解锁js实现 -- `src/js/lib/gesture.js` [demo](https://zhaihaoran.github.io/resume_page/demo/gesture_unlock.html)
+* 比赛对阵图自动自动分组 -- `src/js/matches.js` [demo](https://zhaihaoran.github.io/resume_page/demo/group_trace.html)
+* 基于mojs的svg解锁动画 -- [demo](https://zhaihaoran.github.io/resume_page/demo/icon_unlock/icon_item.html)
+
+---
+
+# 杂项
+
+ - 熟悉Material Design设计准则 
+ - 由于在公司里负责转播推流等相关直播技术支持，对OBS推流方面较为熟悉
+ - PS方面可以完成正常的切图,spirit图制作.可以完成UI方面的需求
+ - 拥有北京户口和C1驾驶证执照
+
+# 技能清单总结
+
+ - Web前端：HTML5/CSS3/ES5/ES6/Ajax/Json
+ - 框架：Bootstrap/jQuery/Materializes/Mojs
+ - Web后端：Go,NodeJs,Express
+ - 前端工具：Bower/Gulp/Less/RequireJs
+ - 版本管理、文档和自动化部署工具：Git
+
+---
+
+# 致谢
+
+感谢您花时间阅读我的简历，如有疑问欢迎留言，期待能有机会与您共事。
+
