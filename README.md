@@ -13,8 +13,8 @@
  - 本科/中国农业大学(985)
  - 工作年限：2年
  - Github：http://github.com/zhaihaoran
- - 期望职位：Javascript初中级前端工程师,NodeJS初中级后端工程师
- - 期望城市：北京，杭州
+ - 期望职位：JS前端研发,Web前端开发
+ - 期望城市：北京，杭州，南京
 
 ---
 
@@ -24,10 +24,12 @@
 
 #### 运营后台前端架构设计实现  -- [爱棋道 | 管理后台](http://www.iqidao.com/admin001/)
 
-##### 基本介绍
+##### 项目介绍
 
-* 运营后台面向所有的运营、教务、客服等工作人员使用，业务涵盖了所有产品相关的支持，包括课程、活动、用户、试卷、题库等方面。具体功能点包含了基本的信息展示、增删该查、权限管理、数据可视化、视频文档和课件上传、新闻专栏富文本编辑等。
-* 后台前端采用的是传统多页面技术方案，易于上手。核心技术栈为 RequireJs + ES5 + Gulp + Less + Documentation + 第三方开源组件等，兼容IE9+，Firefox，Chrome，支持移动端适配。
+![后台预览](./image/admin-2.png)
+
+* 运营后台主要面向所有运营、教务、客服等工作人员进行日常维护，业务涵盖了公司所有产品相关的数据支持，包括课程、活动、用户、试卷、题库等等方面。具体功能点包含了基本的信息展示、增删该查、权限管理、数据可视化、数据导出、视频文档和课件上传、新闻专栏富文本编辑等。
+* 后台前端采用的是服务器渲染+传统多页面的研发方案，技术稳定且成本较低，易于迭代。核心技术栈为 RequireJs + ES5 + Gulp + Less + Documentation + 第三方开源组件，HTML为Go template 渲染生成。整体版本十分稳定、功能齐全；兼容IE9+，Firefox，Chrome;移动端适配，获得一致好评。
 
 ##### 技术特色
 
@@ -40,23 +42,26 @@
 
 #### 落地页、活动页设计以及实现 -- [快速涨棋，突破瓶颈](http://www.iqidao.com/html/baidu/index.html)
 
-* 技术方面主要基于Bootstrap + Less实现静态页面。所有的landingpage均为响应式，兼容IE9+ ，代码命名符合规范。 
-* 完全满足UI设计稿的设计细节，部分活动页由于时间紧迫，自行设计绘制草稿并按时上线，同事领导对于成品非常满意。
-* JS方面自制封装SignModal组件，逻辑包含了部分register、login、validate逻辑，实现多页面复用。
-* JS代码风格为基于prototype原型链的面向对象写法。命名语义化，格式清晰，完全通过JSLint校验。
+* 熟练掌握及使用bootstrap、Less快速实现静态页面,98%还原设计稿。所有落地页均兼容IE9+，移动端适配。代码语义清晰、层次分明、命名规范。 
+* 自制封装登陆模块组件实现登陆注册弹窗，整体流程包含了注册手机号码、密码、验证码、短信校验、倒计时等功能，实现多页面复用。
+* JS代码风格面向对象。变量命名语义化，格式清晰，完全通过eslint校验。
 
 ---
 
-# 其他兴趣作品 
+# 兴趣作品 
 
-#### 数独小游戏  -- [数独游戏](https://zhaihaoran.github.io/sudoku/)
+#### 数独游戏  -- [数独游戏](https://zhaihaoran.github.io/sudoku/)
 
 * 该博客主要为自学与尝试，目前尚未搭建完备，目的为了熟悉nodejs相关api和express框架，后端流程
 * microblog 基于NodeJs + Express  + MongoDB 实现 ，前端基于RequireJS + gulp + Materialize + less 实现
 * microblog搭建过程从数据库到前端模板渲染，对整个网站实现有一定的理解和经验。
 * 博客功能包括了基本的登陆注册退出机制，验证码处理，权限管理，Session处理，form文件上传处理，发表修改删除博客，统计PV数据，游客评论功能，个人信息修改包含了设置头像等。博客内容编辑支持markdown语法转义，评论支持emoji表情输入。
 
-#### 小项目实现
+#### 后台SPA应用demo
+
+* 采用最新技术、基于ES6 + Webpack2 + yarn + React + React-Router + ElementUI 实现的 单页面简易后台demo，为后期重构后台做技术储备。
+
+#### 其他小作品和封装组件
 
 * 自制封装jQuery插件 -- `src/js/lib/`
 * 俄罗斯方块小游戏的js实现 --`src/js/terris.js` [demo](https://zhaihaoran.github.io/resume_page/demo/terris.html)
