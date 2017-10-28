@@ -40,7 +40,7 @@
 * js严格遵循eslint要求、代码风格为面向对象、模块化开发;驼峰命名变量;熟练掌握注释语法以确保Documentation正常生成js接口文档。
 * 后端方面,采用 golang + iris + mysql,熟练使用go语言进行路由编写，部分接口编写；熟练掌握sql、mysql进行数据库增删该查方便进行调试。
 
-#### 落地页、活动页设计以及实现 -- [快速涨棋，突破瓶颈](http://www.iqidao.com/html/baidu/index.html)
+#### 落地页、活动页设计以及实现 -- [快速涨棋，突破瓶颈](http://www.iqidao.com/static/html/baidu/index.html)
 
 * 熟练掌握及使用bootstrap、Less快速实现静态页面,98%还原设计稿。所有落地页均兼容IE9+，移动端适配。代码语义清晰、层次分明、命名规范。 
 * 自制封装登陆模块组件实现登陆注册弹窗，整体流程包含了注册手机号码、密码、验证码、短信校验、倒计时等功能，实现多页面复用。
@@ -50,24 +50,17 @@
 
 # 兴趣作品 
 
-#### 数独游戏  -- [数独游戏](https://zhaihaoran.github.io/sudoku/)
-
-* 该博客主要为自学与尝试，目前尚未搭建完备，目的为了熟悉nodejs相关api和express框架，后端流程
-* microblog 基于NodeJs + Express  + MongoDB 实现 ，前端基于RequireJS + gulp + Materialize + less 实现
-* microblog搭建过程从数据库到前端模板渲染，对整个网站实现有一定的理解和经验。
-* 博客功能包括了基本的登陆注册退出机制，验证码处理，权限管理，Session处理，form文件上传处理，发表修改删除博客，统计PV数据，游客评论功能，个人信息修改包含了设置头像等。博客内容编辑支持markdown语法转义，评论支持emoji表情输入。
+#### 数独游戏  -- [数独游戏](https://zhaihaoran.github.io/resume/)
 
 #### 后台SPA应用demo
 
-* 采用最新技术、基于ES6 + Webpack2 + yarn + React + React-Router + ElementUI 实现的 单页面简易后台demo，为后期重构后台做技术储备。
+* 采用最新技术、基于ES6 + Webpack2 + yarn + React + React-Router + AntDesign 实现的 单页面简易后台demo，为后期重构后台做技术储备。
 
 #### 其他小作品和封装组件
 
-* 自制封装jQuery插件 -- `src/js/lib/`
-* 俄罗斯方块小游戏的js实现 --`src/js/terris.js` [demo](https://zhaihaoran.github.io/resume_page/demo/terris.html)
-* 移动端手势解锁js实现 -- `src/js/lib/gesture.js` [demo](https://zhaihaoran.github.io/resume_page/demo/gesture_unlock.html)
-* 比赛对阵图自动自动分组 -- `src/js/matches.js` [demo](https://zhaihaoran.github.io/resume_page/demo/group_trace.html)
-* 基于mojs的svg解锁动画 -- [demo](https://zhaihaoran.github.io/resume_page/demo/icon_unlock/icon_item.html)
+* 组件库 -- `lib/`
+* 俄罗斯方块 --`terris.js` [demo](https://zhaihaoran.github.io/resume/terris.html)
+* 移动端九宫格解锁实现 -- `gesture.js` [demo](https://zhaihaoran.github.io/resume/unlock.html)
 
 ---
 
@@ -75,16 +68,15 @@
 
  - 熟悉Material Design设计准则 
  - 由于在公司里负责转播推流等相关直播技术支持，对OBS推流方面较为熟悉
- - PS方面可以完成正常的切图,spirit图制作.可以完成UI方面的需求
- - 拥有北京户口和C1驾驶证执照
+ - PS方面可以完成正常的切图,spirit图制作
 
-# 技能清单总结
+# 技能清单
 
  - Web前端：HTML5/CSS3/ES5/ES6/Ajax/Json
- - 框架：Bootstrap/jQuery/Materializes/Mojs
- - Web后端：Go,NodeJs,Express
- - 前端工具：Bower/Gulp/Less/RequireJs
- - 版本管理、文档和自动化部署工具：Git
+ - 框架：Bootstrap/jQuery/React
+ - Web后端：Go/NodeJs
+ - 前端工具：Bower/Yarn/Webpack/Gulp/Less/RequireJs
+ - 版本管理、文档和自动化部署工具：Git、JSDOC
 
 ---
 
