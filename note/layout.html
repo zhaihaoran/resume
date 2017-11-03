@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>常用布局 - 后台底部布局特性</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body {
+            height: 100%;
+        }
+        body {
+            display: table;
+            width: 100%;
+        }
+        .main {
+            background: #fff;
+            color: #000;
+        }
+        .footer {
+            background: #f00;
+            display: table-footer-group;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">这是主题区域</div>
+    <div class="footer">这是底部</div>
+</body>
+</html>

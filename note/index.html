@@ -5,8 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>grammer</title>
+    <style>
+        /* 两列布局 */
+        #main {
+            position: relative;
+            color: #fff;
+            height: 500px;
+        }
+        #main>.left {
+            position: absolute;
+            width: 200px;
+            background: #0f0;
+            height: 500px;
+        }
+        #main>.right {
+            margin-left: 200px;
+            background: #f00;
+            height: 500px;
+        }
+
+        /* 三列布局 */
+        #tree {
+            position: relative;
+        }
+        .fl {
+            float: left;
+            height: 500px;
+        }
+        #tree>.left {
+            width: 200px;
+            margin-left: -100%;
+            background: rgb(34, 86, 255);
+        }
+        #tree>.right {
+            width: 200px;
+            margin-left: -200px;
+            background: rgb(255, 34, 163);
+        }
+        #tree>.center {
+            background: #2f5;
+            width: 100%;
+        }
+        #tree>.center>.content {
+            padding: 0 200px;
+        }
+    </style>
 </head>
 <body>
+    <h3>常用布局实现</h3>
+    <p>常用两列布局：左侧固定，右侧自适应</p>
+    <div id="main" >
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <p>三列布局：左侧、右侧确定宽高，中间自适应</p>
+    <div id="tree">
+        <div class="center fl">
+            <div class="content">
+                <p>思路：整体做浮动处理，左区域可以通过margin-left:-100%,让其覆盖掉中间center，平移到center之上的左侧区域，同理右侧marin-right:-自身宽度，可以平移到center之上的右侧区域，然后在center内部建立一个区域，将padding值分别设置为两个区域的宽度即可</p>
+                <p>关键点：float:left。配合margin-left使用</p>
+            </div>
+        </div>
+        <div class="left fl"></div>
+        <div class="right fl"></div>
+    </div>
+    <p>当页面内容宽度不足一屏的高度时，让底部内容出现在屏幕最底端。如果页面内容高度超过一屏时，内容位于正常的文档流底部</p>
+    <p>1.js判断赋值实现,完全没必要</p>
+    <p>2.纯粹css实现（推荐）见<code>layout.html</code></p>
     <script src="./leetcode.js"></script>
     <!-- <script src="../src/sokudo/js/core/solve.js"></script> -->
 </body>
