@@ -25,9 +25,6 @@
         }
 
         /* 三列布局 */
-        #tree {
-            position: relative;
-        }
         .fl {
             float: left;
             height: 500px;
@@ -48,6 +45,31 @@
         }
         #tree>.center>.content {
             padding: 0 200px;
+        }
+
+        /* 等高布局 */
+        #equalhigh {
+            display: table-row;
+        }
+
+        #equalhigh>.item {
+            display: table-cell;
+            width: 30%;
+            padding: 0 20px;
+            background: #f32;
+        }
+
+        /* 列表布局 */
+        #list {
+            display: table-row;
+        }
+        #list .cell {
+            display: table-cell;
+            *display: inline;
+            width: 16.6%;
+            padding-bottom: 30px;
+            vertical-align:top;
+            background: #0fe;
         }
     </style>
 </head>
@@ -72,6 +94,56 @@
     <p>当页面内容宽度不足一屏的高度时，让底部内容出现在屏幕最底端。如果页面内容高度超过一屏时，内容位于正常的文档流底部</p>
     <p>1.js判断赋值实现,完全没必要</p>
     <p>2.纯粹css实现（推荐）见<code>layout.html</code></p>
+    <hr>
+    <p>等高布局 实现 （table-row table-cell）</p>
+    <div id="equalhigh">
+        <div class="item">
+            lkajsdkljaskldjasdasdasdasdasd
+            asdasdasd
+        </div>
+        <div class="item">
+            <p>asdsadkkasdllasd</p>
+            <p>asdsadkkasdllasd</p>
+            <p>asdsadkkasdllasd</p>
+        </div>
+        <div class="item">
+            <p>kljlloo</p>
+            <p>kljlloo</p>
+            <p>kljlloo</p>
+            <p>kljlloo</p>
+            <p>kljlloo</p>
+            <p>kljlloo</p>
+        </div>
+    </div>
+    <p>列表布局,table-cell 实现，当列表个数不固定，但无论几个都可以实现平分空间。而且列表cell都具备等高属性</p>
+    <div id="list">
+        <div class="cell">
+            <p>12123</p>
+        </div>
+        <div class="cell">
+            <p>12123</p>
+        </div>
+        <div class="cell">
+            <p>12123</p>
+            <p>12123</p>
+        </div>
+        <div class="cell">
+            <p>12123</p>
+            <p>12123</p>
+        </div>
+        <div class="cell">
+            <p>12123</p>
+            <p>12123</p>
+            <p>12123</p>
+            <p>12123</p>
+            <p>12123</p>
+        </div>
+        <div class="cell">
+            <p>12123</p>
+        </div>
+    </div>
+    <p>列表布局 inline-block</p>
+
     <script src="./leetcode.js"></script>
     <!-- <script src="../src/sokudo/js/core/solve.js"></script> -->
 </body>
