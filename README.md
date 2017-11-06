@@ -52,6 +52,10 @@
 
 #### 数独游戏  -- [数独游戏](https://zhaihaoran.github.io/resume/)
 
+#### hexo博客  -- [卡布鲁 | 杂食堆](https://zhaihaoran.github.io/)
+
+* 基于Hexo + GithubPage ，自己DIY了一部分搭建的一个简易博客。
+
 #### 后台SPA应用demo
 
 * 采用最新技术、基于ES6 + Webpack2 + yarn + React + React-Router + AntDesign 实现的 单页面简易后台demo，为后期重构后台做技术储备。
