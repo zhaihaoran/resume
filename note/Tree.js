@@ -13,7 +13,6 @@ class Tree {
     show(){
         return this.data;
     }
-
     
 
 }

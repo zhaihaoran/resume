@@ -52,7 +52,7 @@
 
 #### 数独游戏  -- [数独游戏](https://zhaihaoran.github.io/resume/)
 
-#### hexo博客  -- [卡布鲁 | 杂食堆](https://zhaihaoran.github.io/)
+#### hexo博客  -- [卡布鲁 | 杂食堆] (https://zhaihaoran.github.io/)
 
 * 基于Hexo + GithubPage ，自己DIY了一部分搭建的一个简易博客。
 
