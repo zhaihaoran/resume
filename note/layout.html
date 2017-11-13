@@ -25,10 +25,41 @@
             background: #f00;
             display: table-footer-group;
         }
+        .triangle {
+            width: 0;
+            height: 0;
+            border: 20px solid;
+            border-color: transparent red transparent transparent;
+        }
+        .li {
+            height: 20px;
+            background: lightblue;
+        }
     </style>
 </head>
 <body>
-    <div class="main">这是主题区域</div>
+    <div class="main">
+        这是主题区域
+        <div class="triangle"></div>
+        <p>li与li之间会有看不见的空白空隙，是什么原因引起的，有什么解决办法?</p>
+        <p>现代浏览器都没有了，chrome、firfox。</p>
+        <p>原因是由空格导致的，font-size:0 或者margin负值都可以抵消</p>
+        <ul class="ul">
+            <li class="li"></li>
+            <li class="li"></li>
+            <li class="li"></li>
+        </ul>
+        <input type="text"><input type="submit" value="提交查询">
+    </div>
     <div class="footer">这是底部</div>
+    <script>
+        // document.hidden 表示页面是否隐藏，包含页面在后台标签页中，或浏览器最小化。（这个不是HTML5的，可以做polyfill）
+        // document.visibilityState 有4种状态（这个是HTML5的特性）
+        //      hidden ： 就是上述document.hidden 同理
+        //      visible : 页面在前台标签页中
+        //      prerender ：页面在屏幕外执行预渲染处理
+        //      unloaded : 页面正在从内存中卸载
+        // 应用场景：斗鱼频道
+    </script>
 </body>
 </html>
