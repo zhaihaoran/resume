@@ -156,4 +156,75 @@ function binSearch(arr, data) {
     return -1;
 }
 
-console.log(binSearch([1,2,3,4,5,6,9,13,15,17,18,20],4))
+console.log(binSearch([1, 2, 3, 4, 5, 6, 9, 13, 15, 17, 18, 20], 4))
+
+/**
+ * 随机排序
+ */
+function randomSort1(array) {
+    var result = array.slice(0);
+    result.sort(function() {
+        return Math.random() - 0.5;
+    })
+    return result;
+}
+
+function randomSort2(array) {
+    var result = array.slice(0),
+        i, len = result.length;
+    for (i = 0; i < len; i++) {
+        var rand = parseInt(Math.random() * len, 10);
+        [result[i], result[rand]] = [result[rand], result[i]]
+    }
+    return result;
+}
+
+var sortArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(randomSort1(sortArr));
+console.log(randomSort2(sortArr));
+
+// 写一个通用的事件侦听器函数
+var Event = {
+    // 页面加载完成后
+    ready: function(fn) {
+        if (fn === null) {
+            fn = document
+        }
+        var oldonload = window.onload;
+        // window.onload 默认是null
+        if (typeof window.onload !== 'function') {
+            window.onload = fn;
+        } else {
+            // 说明之前有绑定的函数
+            window.onload = function() {
+                oldonload();
+                fn();
+            }
+        }
+    },
+
+    add: function(element, type, handler) {
+        if (element.addEventListener) {
+            element.addEventListener(type, handler, false)
+            // ie
+        } else if (element.attachEvent) {
+            element.attachEvent('on' + type, function() {
+                handler.call(element);
+            });
+        } else {
+            element['on' + type] = handler;
+        }
+    },
+
+
+    remove: function(element, type, handler) {
+        if (element.removeEventListener) {
+            element.removeEventListener(type, handler, false)
+        } else if (element.datachEvent) {
+            element.datachEvent('on' + type, handler)
+        } else {
+            element['on' + type] = handler
+        }
+
+    }
+}
