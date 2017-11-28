@@ -173,7 +173,7 @@ function randomSort2(array) {
     var result = array.slice(0),
         i, len = result.length;
     for (i = 0; i < len; i++) {
-        var rand = parseInt(Math.random() * len, 10);
+        var rand = parseInt(Math.random() * (len - i), 10);
         [result[i], result[rand]] = [result[rand], result[i]]
     }
     return result;
