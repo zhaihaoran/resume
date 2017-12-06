@@ -54,11 +54,9 @@
 
 #### hexo博客  -- [卡布鲁 | 杂食堆] (https://zhaihaoran.github.io/)
 
-* 基于Hexo + GithubPage ，自己DIY了一部分搭建的一个简易博客。
+#### Nextjs 同构应用 -- [ demo ] (https://github.com/zhaihaoran/next-admin-demo)
 
-#### 后台SPA应用demo
-
-* 采用最新技术、基于ES6 + Webpack2 + yarn + React + React-Router + AntDesign 实现的 单页面简易后台demo，为后期重构后台做技术储备。
+* 采用 Nextjs + React + Mobx + AntDesign + Koa + Mysql 搭建的网站架构雏形，假数据用puer-mock生成，目前正在开发中 ，为后期重构和新项目做技术储备。
 
 #### 其他小作品和封装组件
 
