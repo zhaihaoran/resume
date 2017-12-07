@@ -12,7 +12,7 @@
  - 翟浩然/男/1992 
  - 本科/中国农业大学(985)
  - 工作年限：2年
- - Github：http://github.com/zhaihaoran
+ - Github：https://github.com/zhaihaoran
  - 期望职位：JS前端研发,Web前端开发
  - 期望城市：北京，杭州，南京
 
@@ -22,7 +22,7 @@
 
 ### [爱棋道文化传播有限公司](http://www.iqidao.com) - 2016年2月~~至今
 
-#### 运营后台前端架构设计实现  -- [爱棋道 | 管理后台](http://www.iqidao.com/admin001/)
+#### 运营后台 -- [爱棋道 | 管理后台](http://www.iqidao.com/admin001/)
 
 ##### 项目介绍
 
@@ -52,9 +52,9 @@
 
 #### 数独游戏  -- [数独游戏](https://zhaihaoran.github.io/resume/)
 
-#### hexo博客  -- [卡布鲁 | 杂食堆] (https://zhaihaoran.github.io/)
+#### hexo博客  -- [卡布鲁 | 杂食堆](https://zhaihaoran.github.io/)
 
-#### Nextjs 同构应用 -- [ demo ] (https://github.com/zhaihaoran/next-admin-demo)
+#### Nextjs 同构应用 -- [ demo ](https://github.com/zhaihaoran/next-admin-demo)
 
 * 采用 Nextjs + React + Mobx + AntDesign + Koa + Mysql 搭建的网站架构雏形，假数据用puer-mock生成，目前正在开发中 ，为后期重构和新项目做技术储备。
 
