@@ -5,25 +5,25 @@ function log() {
      * 2.Array.from
      */
     var array = Array.from(arguments);
-    array.unshift("(app)");
+    array.unshift('(app)');
 
     console.log.apply(console, array);
 }
 
 function spacify(str) {
-    return str.split("").join(" ");
+    return str.split('').join(' ');
 }
 
-log("222");
-log("222", "2123");
-console.log(spacify("kljk"));
+log('222');
+log('222', '2123');
+console.log(spacify('kljk'));
 
 String.prototype.spacify = function(space) {
     console.log(this);
-    return this.split("").join(space);
+    return this.split('').join(space);
 };
 
-console.log("asds".spacify(" "));
+console.log('asds'.spacify(' '));
 
 // 实现bind函数,为了兼容老浏览器
 Function.prototype.bind =
@@ -38,9 +38,9 @@ Function.prototype.bind =
  */
 
 function* helloWorldGenerator() {
-    yield "hello";
-    yield "world";
-    return "ending";
+    yield 'hello';
+    yield 'world';
+    return 'ending';
 }
 
 var hw = helloWorldGenerator();
@@ -67,9 +67,9 @@ setTimeout(() => {
 // yield 只能放在*函数中，而且，如果在表达式中，需要放在圆括号里,yield 本身是没值的，本身代表的是next传入的值
 function* demos() {
     // 必须分开申明，要不然就直接用yield
-    console.log("hello " + (yield));
-    console.log("hello " + (yield));
-    console.log("hello " + (yield));
+    console.log('hello ' + (yield));
+    console.log('hello ' + (yield));
+    console.log('hello ' + (yield));
 }
 
 var tlm = demos();
@@ -136,9 +136,9 @@ console.log(asd);
  */
 var clock = function*() {
     while (true) {
-        console.log("Ticks");
+        console.log('Ticks');
         yield;
-        console.log("Tocks");
+        console.log('Tocks');
         yield;
     }
 };
