@@ -29,6 +29,33 @@ body {
     box-shadow: inset 0 0px 5px 5px rgba(231, 231, 231, 0.4)
 }
 
+.cl1 {
+    justify-content: center;
+    align-items: center;
+}
+
+.cl2 {
+    justify-content: space-between;
+}
+
+.cl2 .item:nth-child(2) {
+    align-self: flex-end
+}
+
+
+.cl3 {
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.cl3 .item:nth-child(2) {
+    align-self: center;
+}
+
+.cl3 .item:nth-child(3) {
+    align-self: flex-end;
+}
+
 
 
 
@@ -121,6 +148,7 @@ body {
 .cube5 .cube5-wrapper:nth-child(3) {
     align-items: flex-end;
 }
+*/
 
 .cube6 {
     flex-direction: column;
@@ -131,4 +159,4 @@ body {
     flex: 1;
     align-items: center;
     justify-content: space-around;
-} */
+} 
