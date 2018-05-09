@@ -59,8 +59,20 @@ console.log(asda.hasOwnProperty('clone'));
 
 var a = 1;
 test();
+
 function test() {
     console.log(a);
     var a = 2;
     console.log(a);
 }
+
+
+setTimeout(function() {
+    console.log(1);
+}, 0);
+var tem = 0;
+for (var i = 1; i < 10; i++) {
+    tem += i;
+    console.log(tem);
+};
+console.log(2);
