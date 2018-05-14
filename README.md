@@ -1,52 +1,64 @@
 # 联系方式
 
 - 手机：13552232913 
-- Email：zhaihaoran@iqidao.com 
+- Email：13552232913@163.com 
 - 微信号：zhai359118915
 - QQ：359118915
-
----
 
 # 个人信息
 
  - 翟浩然/男/1992 
  - 本科/中国农业大学(985)
- - 工作年限：2年
+ - 工作年限：3年
  - Github：https://github.com/zhaihaoran
- - 期望职位：JS前端研发,Web前端开发
- - 期望城市：北京，杭州，南京
-
----
+ - 期望职位：JS前端开发,Web前端开发
+ - 期望城市：北京，杭州
 
 # 工作经历
 
-### [爱棋道文化传播有限公司](http://www.iqidao.com) - 2016年2月~~至今
+### 2018.2 ~~ 2018.5 [途梦公益教育](#) 
 
-#### 运营后台 -- [爱棋道 | 管理后台](http://www.iqidao.com/admin001/)
+#### 项目介绍： 
 
-##### 项目介绍
+途梦主要为偏远贫困学校和社会人士提供一个良好的在线授课平台，致力于邀请各行各业的成功人士在途梦上为偏远贫困地区的孩子了解更广阔的世界，获得更优质的教育。
+
+#### 工作内容： 
+
+负责途梦网站主站、梦享家、学校、途梦运营后台前端架构整体搭建、设计、部署与实现。
+
+#### 技术介绍： 
+
+- 主站前端技术架构搭建基于ES6 + Bootstrap4 + webpack + scss + Axios等 、功能上集成了分页、分享、视频播放等功能；
+- 主站兼容IE9+、Firefox、Chrome,所有页面均为响应式设计、SEO良好；
+- 代码上变量函数命名语义化、结构清晰、注释清晰。页面渲染采用服务器smarty模板生成。
+- 后台前端技术技术栈为 Vue + Vue-Router + Vuex + ES6 + Scss + Axios + ElementUI和一些自制组件，功能方面包含了常用的增删改查、拖拽、视频上传、播放、聊天等功能。 项目设计模块化良好，层次清晰；
+- 后台通过公共平台apimock模拟数据接口、利用webpack-dev-server的proxy反向代理，完全实现前后端分离、提升开发效率。
+
+-----
+
+
+### 2016.2~~2018.1 [爱棋道文化传播有限公司](http://www.iqidao.com) 
 
 <img src="docs/image/admin-2.jpg" width="500">
 
+#### 项目介绍： 
+
+爱棋道是专注于围棋在线教育的网上学校，其创立的在线视频课堂技术，自主研发的教材与教学方式，为学生们提高水平提供了超越传统学习方式的全新途径，目前隶属于好未来旗下。
+
+#### 工作内容： 
+
+负责公司运营后台前端重构、业务功能开发；公司活动落地页设计与实现；研发教师上课工具；
+
+#### 技术介绍
+
 * 运营后台主要面向所有运营、教务、客服等工作人员进行日常维护，业务涵盖了公司所有产品相关的数据支持，包括课程、活动、用户、试卷、题库等等方面。具体功能点包含了基本的信息展示、增删该查、权限管理、数据可视化、数据导出、视频文档和课件上传、新闻专栏富文本编辑等。
-* 后台前端采用的是服务器渲染+传统多页面的研发方案，技术稳定且成本较低，易于迭代。核心技术栈为 RequireJs + ES5 + Gulp + Less + Documentation + 第三方开源组件，HTML为Go template 渲染生成。整体版本十分稳定、功能齐全；兼容IE9+，Firefox，Chrome;移动端适配，获得一致好评。
-
-##### 技术特色
-
-* 基于History + Ajax自制pjax组件,在列表查询页中配合分页实现了局域异步刷新，Ajax缓存,极大提升了用户体验;
-* js方面,基于AMD模块化开发,多页面通用组件统一声明,自制工具类util,二次封装组件等工作以支持页面js的工作,抽象度较高,逻辑结构清晰。
-* 高度集成了各种第三方开源组件并进行二次封装确保正常，具体包含富文本编辑（froalaEditor），远程下拉框（select2），日期选择（datetimepicker）等等
-* 缓存策略方面采用长期cache同时结合依赖文件添加版本号来确保网页性能和线上及时更新，对前端性能优化有一定了解;
+* 后台前端采用的是服务器渲染+传统多页面的研发方案，技术稳定且成本较低，易于迭代。核心技术栈为 RequireJs + ES5 + Gulp + Less + Documentation + 第三方开源插件，HTML为Go template 渲染生成。整体版本十分稳定、功能齐全；兼容IE9+，Firefox，Chrome;移动端适配，获得一致好评。
+* 前端整体基于AMD模块化开发,多页面通用组件统一声明,自制工具类util,二次封装组件等工作以支持页面js的工作,抽象度较高,逻辑结构清晰。
+* 高度集成了各种第三方开源组件并进行二次封装确保正常，具体包含富文本编辑（froalaEditor），远程下拉框（select2），日期选择（datetimepicker）等等。
+* 缓存策略方面采用长期cache同时结合依赖文件添加版本号来确保网页性能和线上及时更新，对前端性能优化有一定了解。
 * js严格遵循eslint要求、代码风格为面向对象、模块化开发;驼峰命名变量;熟练掌握注释语法以确保Documentation正常生成js接口文档。
-* 后端方面,采用 golang + iris + mysql,熟练使用go语言进行路由编写，部分接口编写；熟练掌握sql、mysql进行数据库增删该查方便进行调试。
+* 后端方面技术栈为 golang + iris + mysql,熟练使用go语言进行路由编写，部分接口编写；熟练掌握sql、mysql进行数据库增删该查方便进行调试。
 
-#### 落地页、活动页设计以及实现 -- [快速涨棋，突破瓶颈](http://www.iqidao.com/static/html/baidu/index.html)
-
-* 熟练掌握及使用bootstrap、Less快速实现静态页面,98%还原设计稿。所有落地页均兼容IE9+，移动端适配。代码语义清晰、层次分明、命名规范。 
-* 自制封装登陆模块组件实现登陆注册弹窗，整体流程包含了注册手机号码、密码、验证码、短信校验、倒计时等功能，实现多页面复用。
-* JS代码风格面向对象。变量命名语义化，格式清晰，完全通过eslint校验。
-
----
 
 # 兴趣作品 
 
@@ -56,31 +68,36 @@
 
 #### Nextjs 同构应用 -- [ demo ](https://github.com/zhaihaoran/next-admin-demo)
 
-* 采用 Nextjs + React + Mobx + AntDesign + Koa + Mysql 搭建的网站架构雏形，假数据用puer-mock生成，目前正在开发中 ，为后期重构和新项目做技术储备。
+* 采用 Nextjs + React + Mobx + AntDesign + Koa + Mysql 搭建的网站架构雏形，假数据用puer-mock生成，为后期重构和新项目做技术储备。
 
 #### 其他小作品和封装组件
 
-* 组件库 -- `lib/`
 * 俄罗斯方块 --`terris.js` [demo](https://zhaihaoran.github.io/resume/terris.html)
 * 移动端九宫格解锁实现 -- `gesture.js` [demo](https://zhaihaoran.github.io/resume/unlock.html)
 
----
 
-# 杂项
+# 自我评价
 
- - 熟悉Material Design设计准则 
- - 由于在公司里负责转播推流等相关直播技术支持，对OBS推流方面较为熟悉
- - PS方面可以完成正常的切图,spirit图制作
+ - 熟练掌握及使用Vue及周边生态、后台业务功能点基本完全覆盖
+ - 熟练使用ES5、ES6进行日常前端开发
+ - 熟练使用chrome调试工具进行调试
+ - 熟练使用Bootstrap、AJAX、jQuery、RequireJS进行传统前端模式开发
+ - 对HTTP协议有一定理解、对页面性能优化、响应有一定理解，代码风格良好，注释清楚，命名规范
+ - 熟练使用webpack、gulp、git、gitlab等工具
+ - 熟练使用HTML5、CSS3、Scss、Less、flex、Iconfont进行日常页面布局和切图
+ - 熟练使用mac进行日常开发、有笔记习惯
+ - 了解Nuxt、React及周边生态，有demo经验
+ - 独立自主解决问题能力很强，时常翻墙google和stackoverflow解决bug，英文无障碍阅读官网技术文档。
+ - 对新技术充满热情、热爱交流，时常翻阅掘金和大牛博客提升姿势、弥补技术短板，在后台业务功能模块设计上有一定经验和产品思维
+ - 目前户口落户于北京市昌平区沙河县派出所 
 
 # 技能清单
 
- - Web前端：HTML5/CSS3/ES5/ES6/Ajax/Json
- - 框架：Bootstrap/jQuery/React
- - Web后端：Go/NodeJs
- - 前端工具：Bower/Yarn/Webpack/Gulp/Less/RequireJs
- - 版本管理、文档和自动化部署工具：Git、JSDOC
-
----
+ - 基础技能：HTML5/CSS3/JavaScript/Ajax/JSON/jQuery
+ - 框架：Vue全家桶/Bootstrap及其周边/React及部分周边/
+ - Web后端：Go/NodeJs/Smarty
+ - 前端工具：Bower/Yarn/Webpack/Gulp/Less/Scss/RequireJs
+ - 版本管理：Git、GitLab、GitHub
 
 # 致谢
 
