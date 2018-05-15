@@ -37,6 +37,34 @@ function isPrime(n) {
     return !(/^.?$|^(..+?)\1+$/).test('1'.repeat(n))
 }
 
+
+/* 判断质数 */
+function isPrimes(n) {
+    if (typeof n !== "number" || !Number.isInteger(n)) {
+        return false;
+    }
+
+    if (n == 2 || n === 3 || n == 1) {
+        return true;
+    } else if (n % 2 == 0) {
+        return false;
+    } // 排除偶数
+
+    // 依次判断能否被奇数整除,循环最大值为更号n，因为一个数为如果可以分解，一定是有两个数的，其中一个大于sqrtn,另一个小于sqrt（n），所以只需要遍历到sqrt（n）
+    // 质数分布的规律：大于等于5的质数一定和6的倍数相邻。例如5和7，11和13,17和19等等；
+    // 此时判断质数可以6个为单元快进，即将方法（2）循环中i++步长加大为6，加快判断速度，原因是，假如要判定的数为n，则n必定是6x-1或6x+1的形式，对于循环中6i-1，6i，6i+1,6i+2，6i+3，6i+4，其中如果n能被6i，6i+2，6i+4整除，则n至少得是一个偶数，但是6x-1或6x+1的形式明显是一个奇数，故不成立；另外，如果n能被6i+3整除，则n至少能被3整除，但是6x能被3整除，故6x-1或6x+1（即n）不可能被3整除，故不成立。综上，循环中只需要考虑6i-1和6i+1的情况，即循环的步长可以定为6，每次判断循环变量k和k+2的情况即可，理论上讲整体速度应该会是方法（2）的3倍
+    if (n % 6 !== 1 && n % 6 !== 5) {
+        return false;
+    }
+
+    for (var i = 5; i <= Math.sqrt(n); i += 6) {
+        if (n % i === 0 || (n + 2) % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
 1e3
 
 /**
@@ -166,3 +194,21 @@ function quickSort(array) {
 }
 
 console.log(quickSort([2, 3, 1, 4, 5, 8, 6, 12, 10]))
+
+function quickSorts(array) {
+    if (array.length <=1) {
+        return array;
+    }
+    let pivot = array.splice(~~(array.length/2),1)[0];
+    let left = [],right = [],i,l=array.length;
+    for(i=0;i<l;i++) {
+        if(array[i]<pivot) {
+            left.push(pivot)
+        } else {
+            right.push(pivot)
+        }
+    }
+    return quickSorts(left).concat([pivot],quickSorts(right))
+}
+
+console.log(quickSorts([2, 3, 1, 4, 5, 8, 6, 12, 10]))

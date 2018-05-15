@@ -135,6 +135,9 @@ const arrs = [1, 2, 3, 4, 5, 1, 7, 4, 8, 5, 2, 4];
 console.log(findMin(arrs))
 console.log(findMax(arrs))
 
+console.log(Math.min(...arrs))
+console.log(Math.max(...arrs))
+
 /**
  * 有序数组查找，最好方式是二分查找
  */
@@ -168,6 +171,12 @@ function randomSort1(array) {
     })
     return result;
 }
+
+function randomSort3(array) {
+    return array.slice(0).sort(()=>Math.random()-0.5);
+}
+
+console.log(randomSort3([1,5,2,4,5,1,2,7,9,12,43]))
 
 function randomSort2(array) {
     var result = array.slice(0),

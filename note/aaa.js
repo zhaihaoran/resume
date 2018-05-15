@@ -27,23 +27,6 @@ var a = [1, 2, 3, 4, 5];
 a.splice(1, 3, 5, 2, 1);
 console.log(a); // [1,5,2,1,5]
 
-function test() {
-    var n = 4399;
-
-    function add() {
-        n++;
-        console.log(n);
-    }
-}
-
-var result1 = test();
-var result2 = test();
-
-result1.add();
-result1.add();
-console.log(result1.n);
-result2.add();
-
 var asda = {
     hands: 2,
     boxe: 3,
@@ -57,16 +40,18 @@ Object.prototype.clone = function(a) {
 console.log(asda.hasOwnProperty('hands'));
 console.log(asda.hasOwnProperty('clone'));
 
+
+/* 结果？ */
 var a = 1;
 test();
 
 function test() {
-    console.log(a);
+    console.log(a); // 打印a的时候，a并没有在function内赋值，所以是undefined
     var a = 2;
     console.log(a);
 }
 
-
+/* 如何输出？ */
 setTimeout(function() {
     console.log(1);
 }, 0);

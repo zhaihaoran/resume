@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>html5.2 新特性</title>
 </head>
+
 <body>
     <p>dialog 默认是不显示的，通过加open属性可以让其显示，js也可以操控</p>
     <dialog id="dialog">
@@ -14,9 +16,28 @@
     </dialog>
     <p>支付请求API --- allowpaymentrequest,嵌套在iframe上</p>
     <script>
-
         const dialog = document.querySelector('#dialog')
 
+        function quickSorts(array) {
+            if (array.length <= 1) {
+                return array;
+            }
+            let pivot = array.splice(~~(array.length / 2), 1)[0];
+            let left = [],
+                right = [],
+                i, l = array.length;
+            for (i = 0; i < l; i++) {
+                if (array[i] <= pivot) {
+                    left.push(array[i])
+                } else {
+                    right.push(array[i])
+                }
+            }
+            return quickSorts(left).concat([pivot], quickSorts(right))
+        }
+
+        console.log(quickSorts([2, 3, 1, 4, 5, 8, 6, 3, 12, 10]))
     </script>
 </body>
+
 </html>
