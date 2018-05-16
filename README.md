@@ -73,7 +73,6 @@
 * 俄罗斯方块 --`terris.js` [demo](https://zhaihaoran.github.io/resume/terris.html)
 * 移动端九宫格解锁实现 -- `gesture.js` [demo](https://zhaihaoran.github.io/resume/unlock.html)
 
-
 # 自我评价
 
  - 熟练掌握及使用Vue及周边生态、后台业务功能点基本完全覆盖
