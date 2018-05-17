@@ -367,3 +367,125 @@ Object.preventExtensions(dog)
 dog.age = 20;
 
 console.log(dog);
+
+/* 对象解构 高级技巧 */
+const csvFileline = "1992,Jphn,2014,MSlT,2112,LIES";
+const {
+    2: country,
+    4: state
+} = csvFileline.split(',')
+
+console.log(country, state); //2014 2112
+
+
+
+/* 删除数组中指定的值，返回该数组的长度 */
+let test1 = [1, 2, 2, 3, 2, 4, 6, 8],
+    val = 2;
+
+function removeEl(ary, val) {
+    let sameV = 0; // 有几个相同的值
+    ary.reduce((a, b) => {
+        if (a === val) {
+            sameV++
+        }
+        return b;
+    })
+    return ary.length - sameV;
+}
+
+console.log(removeEl(test1, val));
+
+/* 数组去重，一个排好序的数组，不能开辟额外的数组空间，返回新数组长度 */
+function uniqueAry(ary) {
+    let j = 0;
+    let l = ary.length;
+    for (let i = 1; i < l; i++) {
+        if (ary[j] != ary[i]) {
+            ary[++j] = ary[i]
+        }
+    }
+    return j + 1;
+}
+
+console.log(uniqueAry([1, 2, 2, 2, 3]));
+
+/* 数组去重2，一个排好序的数组，不能开辟额外的数组空间，返回新数组长度，每个元素最多可以重复两次 */
+function uniqueArys(ary) {
+    let j = 0;
+    let count = 0; // 计数器
+    let l = ary.length;
+    for (let i = 1; i < l; i++) {
+        if (ary[j] === ary[i]) {
+            count++;
+            if (count < 2) {
+                ary[++j] = ary[i];
+            }
+        } else {
+            ary[++j] = ary[i];
+            count = 0;
+        }
+    }
+    return j + 1;
+}
+
+
+console.log(uniqueArys([1, 2, 2, 3, 3, 4, 4, 4, 5]));
+
+
+/* 归并排序 */
+
+/**
+ * 分治策略
+ * 
+ * 思路就是将数组不断切分，然后在进行合并，合并的过程是从下往上，
+ */
+
+function merge(left, right) {
+    var tmp = [];
+    while (left.length && right.length) {
+        if (left[0] < right[0]) {
+            tmp.push(left.shift());
+        } else {
+            tmp.push(right.shift());
+        }
+    }
+    return tmp.concat(left, right)
+}
+
+function mergeSort(a) {
+    if (a.length === 1) {
+        return a;
+    }
+    var mid = ~~(a.length / 2),
+        left = a.slice(0, mid),
+        right = a.slice(mid);
+
+    return merge(mergeSort(left), mergeSort(right));
+}
+
+
+console.log(mergeSort([2, 3, 1, 5, 4, 8, 12, 43, 21, 32, 9]));
+
+/* 请将两个有序数组合并为一个数组，不能使用concat和sort */
+
+var ary1 = [1, 4, 7, 8, 14, 19];
+var ary2 = [2, 5, 9, 12, 15];
+
+function merge(left, right) {
+    var tmp = [];
+    var il = 0;
+    var ir = 0;
+
+    while (left.length > il && right.length > ir) {
+        if (left[il] < right[ir]) {
+            tmp.push(left[il++])
+        } else {
+            tmp.push(right[ir++])
+        }
+    }
+    tmp.push(left[il] ? left[il] : right[ir])
+    return tmp;
+}
+
+console.log(merge(ary1, ary2));

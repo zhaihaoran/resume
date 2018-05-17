@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 20px;
+            height: 20px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <script>
+        // bind apply call 的区别
+        function show(sex) {
+            console.log("普通函数" + sex);
+        }
+        var person = {
+            name: "aa",
+            age: 14
+        }
+
+        show.call(person, "男");
+        show.apply(person, ["女"]);
+        /* bind 和call的区别就是，bind没有立即执行，可以暂时把变量存起来 */
+        
+
+        /* context 为需要绑定到作用域的对象或上下文 */
+        function bbb(context) {
+            var self = this;
+            var arg = Array.prototype.slice.call(arguments, 1);
+            /* bind 会将第一个参数作为它运行时的this，其他参数都作为参数 */
+            return function() {
+                var bindArgs = Array.prototype.slice.call(arguments);
+                return self.apply(context, args.concat(bindArgs))
+            }
+        }
+
+        Function.prototype.bind = function(context) {
+            var _self = this;
+            debugger
+            var args = Array.prototype.slice.call(arguments, 1);
+            return function() {
+                var bindArgs = Array.prototype.slice.call(arguments);
+                return _self.apply(context, args.concat(bindArgs))
+            }
+        }
+
+        var ss = show.bind(person);
+        console.log(ss("哈哈"));
+
+        
+    </script>
+</body>
+
+</html>

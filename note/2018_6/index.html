@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas渲染图片</title>
+</head>
+
+<body>
+    <!-- 原生渲染 -->
+    <canvas width="300" height="300" id="canvas"></canvas>
+    <!-- 反色渲染 -->
+    <canvas width="300" height="300" id="canvas1"></canvas>
+    <!-- 去色渲染 -->
+    <canvas width="300" height="300" id="canvas2"></canvas>
+    <script>
+        /* 将图片转为canvas渲染，提升速率 */
+        window.onload = function() {
+            let img = new Image();
+            img.src = "196767.jpg"
+            img.onload = function() {
+                let {
+                    width: imageWidth,
+                    height: imageHeight
+                } = img
+
+                /* 原图渲染 */
+                var ctx = document.querySelector('#canvas').getContext("2d");
+                ctx.drawImage(img, 0, 0, 300, imageHeight / imageWidth * 300)
+
+
+                /* 反色渲染 */
+                /**
+                 * 原理：将图片中的每一个元素进行a=255-b的公式转换，既可得到最终结果
+                 */
+                var ctx1 = document.querySelector('#canvas1').getContext("2d");
+                ctx1.drawImage(img, 0, 0, 300, imageHeight / imageWidth * 300)
+                /* 必须在服务器下才不会有跨域问题，在本地起，浏览器默认是跨域行为会报错，或者转成base64传进去 */
+                var imageData = ctx.getImageData(0, 0, 300, imageHeight / imageWidth * 300);
+                console.log(imageData);
+                var imageData_length = imageData.data.length / 4;
+                /* 因为一个颜色由4个值组成，imageData里平铺了区域里所有色块的颜色值 */
+                /* 解析之后进行算法计算 */
+                for (var i = 0; i < imageData_length; i++) {
+                    imageData.data[i * 4] = 255 - imageData.data[i * 4];
+                    imageData.data[i * 4 + 1] = 255 - imageData.data[i * 4 + 1];
+                    imageData.data[i * 4 + 2] = 255 - imageData.data[i * 4 + 2];
+                }
+                ctx.putImageData(imageData, 0, 0)
+
+
+                /* 去色 */
+                var ctx2 = document.querySelector('#canvas2').getContext("2d");
+                ctx2.drawImage(img, 0, 0, 300, imageHeight / imageWidth * 300);
+                var imageData2 = ctx.getImageData(0, 0, 300, imageHeight / imageWidth * 300);
+                var imageData2_length = imageData2.data.length / 4;
+                /**
+                 * 去色算法：gay = red * 0.3 + green * 0.59 + blue * 0.11
+                 */
+                for (var i = 0; i < imageData2_length; i++) {
+                    let red = imageData2.data[i * 4];
+                    let green = imageData2.data[i * 4 + 1];
+                    let blue = imageData2.data[i * 4 + 2];
+                    let gray = 0.3 * red + 0.59 * green + 0.11 * blue;
+                    imageData2.data[i * 4] = gray;
+                    imageData2.data[i * 4 + 1] = gray;
+                    imageData2.data[i * 4 + 2] = gray;
+                }
+                ctx2.putImageData(imageData2, 0, 0)
+
+            }
+        }
+    </script>
+</body>
+
+</html>
