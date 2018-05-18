@@ -489,3 +489,53 @@ function merge(left, right) {
 }
 
 console.log(merge(ary1, ary2));
+
+var m = 1,
+    j = k = 0;
+
+function add(n) {
+    return n = n + 1;　
+}
+y = add(m);
+
+function add(n) {
+    return n = n + 3;
+}
+z = add(m);
+
+console.log(y, z);
+/**
+ * 所以上面代码先解析了add函数，但是第二个在后面给第一个覆盖了，所以y和z调用的都是第二个add函数，y调用add函数传参m，用完一次就销毁了，下次重新赋值，所以z传值的时候m还是等于1
+ * 
+ */
+
+
+/* pascal triangle */
+/**
+ * 对于k行，每行有k个元素
+ * 第一和最后一个元素都是1，
+ * k行里第n个元素为A[k][n] = A[k-1][n-1] + A[k-1][n]
+ */
+function generatePascal(row) {
+    let tmp = [];
+    let n = 0;
+    if (row === 1) {
+        return [1];
+    }
+    if (row === 2) {
+        return [1, 1];
+    }
+    while (n < row) {
+        let ary = [];
+        for (var i = 0; i < n; i++) {
+            ary.push((tmp[n - 1][i] + tmp[n - 1][i + 1]));
+        }
+        tmp[n++] = [1].concat(ary, [1]);
+    }
+    return tmp;
+}
+
+
+console.log(generatePascal(2));
+console.log(generatePascal(3));
+console.log(generatePascal(4));
