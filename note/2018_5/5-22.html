@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="5-22-interview.js"></script>
+    <script>
+        document.addEventListener("mousemove", debounce(function() {
+            console.log("debounce 成功");
+        }, 1000));
+
+        document.addEventListener('mousemove', throttle(function() {
+            console.log("throttle 成功");
+        }, 1000))
+    </script>
+</body>
+
+</html>

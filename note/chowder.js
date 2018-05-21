@@ -81,3 +81,50 @@ for (let i = 1; i <= 5; i++) {
         console.log(i);
     }, i * 1000)
 }
+
+console.log(`TODO LIST:
+    * one
+    * two
+`)
+
+console.log(`object
+    haha
+`);
+
+console.log(`1 < 2 ${ 1 < 2 ? '✔︎' : '✘'}`)
+
+const l10n = (strings, ...rest) => {
+    console.log(strings, rest);
+    return strings.reduce((total, current, idx) => {
+        const arg = rest[idx]
+        let insertValue = ''
+        if (typeof arg === 'number') {
+            insertValue = `¥${arg}`
+        } else if (arg instanceof Date) {
+            insertValue = arg.toLocaleDateString('zh-CN')
+        } else if (arg !== undefined) {
+            insertValue = arg
+        }
+        return total + current + insertValue
+    }, '');
+}
+const brand = 'G-Shock'
+const date = new Date()
+const price = 1000
+
+let mm = l10n `I bought a ${brand} watch on ${date}, it cost me ${price}.`
+
+console.log(mm);
+
+
+let mks = String.raw `\n\n`
+console.log(mks, mks.length); //\n\n 4
+// 可以用于创建原数组中的数据
+let b = '\n\n' // 换行符
+console.log(b, b.length); // 换了两行 2
+
+/* css 权重 */
+/**
+ * 1.!important 优先级最高，但也会被权重高的important所覆盖
+ * 2.行内样式总会覆盖外来样式
+ */
