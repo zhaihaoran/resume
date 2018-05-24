@@ -12,12 +12,72 @@
             height: 20px;
             background: red;
         }
+
+        /* css 实现内凹角 */
+
+        :root {
+            /* css3 里声明全局变量 ， 使用 -- 来实现 */
+            --r: 2em;
+        }
+
+        .box-radio-reset {
+            position: relative;
+            margin: .25em auto;
+            min-width: 15em;
+            max-width: 15em;
+            overflow: hidden;
+            min-height: 10em;
+            border-radius: 1em;
+        }
+
+        .box-radio-reset::before {
+            position: absolute;
+            margin: calc(var(--r) * (-1));
+            padding: var(--r);
+            border-radius: 50%;
+            box-shadow: 0 0 0 300px rgba(0, 0, 0, .4);
+            content: '';
+        }
+
+        /* var 函数 可以设定默认值  var(--Colors,#e5e5e5) */
+
+        .reset-text {
+            padding: var(--r);
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+            display: inline-block;
+            word-wrap: break-word;
+        }
+
+        /* outline 不会占用空间，不会增加额外的width和height，也不一定是矩形。起突出元素作用 */
+
+        /* outline 不参与浏览器布局计算，仅仅是绘制在元素周边，所以自然也不会受到transform：scale的影响 */
+
+        /* 实现封边效果 */
+
+        .outline-demo {
+            background: #000;
+            border: 20px solid #000;
+            outline: 2px dashed #fff;
+            outline-offset: -15px;
+        }
+
+        .outline-pos {
+            margin-left: 200px;
+            margin-top: 50px;
+            width: 200px;
+            height: 100px;
+        }
     </style>
 </head>
 
 <body>
     <div class="box1"></div>
-    <script src="lll.js" ></script>
+    <div class="box-radio-reset">
+        <p class="reset-text">womenasdkljasdlksajdlkasjdlksajdklajldkkljsad</p>
+    </div>
+    <div class="outline-pos outline-demo"></div>
     <script>
         // bind apply call 的区别
         function show(sex) {
@@ -31,7 +91,7 @@
         show.call(person, "男");
         show.apply(person, ["女"]);
         /* bind 和call的区别就是，bind没有立即执行，可以暂时把变量存起来 */
-        
+
 
         /* context 为需要绑定到作用域的对象或上下文 */
         function bbb(context) {
@@ -55,8 +115,6 @@
 
         var ss = show.bind(person);
         console.log(ss("哈哈"));
-
-        
     </script>
 </body>
 
