@@ -17,6 +17,7 @@
 
 <body>
     <div class="box1"></div>
+    <script src="lll.js" ></script>
     <script>
         // bind apply call 的区别
         function show(sex) {
@@ -45,7 +46,6 @@
 
         Function.prototype.bind = function(context) {
             var _self = this;
-            debugger
             var args = Array.prototype.slice.call(arguments, 1);
             return function() {
                 var bindArgs = Array.prototype.slice.call(arguments);
