@@ -9,6 +9,7 @@ console.log("12345".replace(/\b/g, ','));
 console.log("word words".replace(/\bword\b/g, "0")); // 0 words 不加的话\b，就是0 0s
 
 
+
 /* 先行断言  (?=) */
 
 // 表示后面应该跟相应的内容才匹配
