@@ -1,32 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .box {
-            
+        html {
+            --pink: #bb2133;
+            --aqua: #3cdddd;
+            --white: #fff;
         }
-        .a {
-            background: red;
-            height: 300px;
+
+        .button {
+            position: relative;
+            padding: 1em 2em;
+            display: flex;
+            align-items: center;
+            background-clip: padding-box;
+            background: var(--pink);
+            width: 14rem;
+            text-align: center;
+            border: none;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            outline: none;
+            overflow: hidden;
+            border-radius: 100px;
+            transition: background .4s ease;
         }
-        .b {
-            width: 10px;
-            height: 10px;
-            background: green;
+
+        .button:hover {
+            background: #fb03cb;
+        }
+
+        .button::before {
+            --size: 1000px;
+            --scale: 0;
+            --opacity: 0;
+            content: '';
+            position: absolute;
+            left: calc(var(--x) - var(--size)/2);
+            top: calc(var(--y) - var(--size)/2);
+            width: var(--size);
+            height: var(--size);
+            background: radial-gradient(circle closest-side, #f01c35, transparent);
+            transform: scale(var(--scale));
+            transition: transform .8s cubic-bezier(.22, 1, .32, 1), opacity .8s cubic-bezier(.22, 1, .32, 1);
+        }
+
+        .button:hover::before {
+            --scale: 1;
+            --opacity: 1;
+        }
+
+        span {
+            position: relative;
         }
     </style>
 </head>
+
 <body>
-    <div class="box">
-        <div class="a"></div>
-        <span class="b">111</span>
-    </div>
+    <div class="button"> <span>确定</span> </div>
     <script>
-        alert('1')
+        document.querySelector('.button').onmousemove = e => {
+            const x = e.pageX - e.target.offsetLeft;
+            const y = e.pageY - e.target.offsetTop;
+            e.target.style.setProperty('--x', `${ x }px`)
+            e.target.style.setProperty('--y', `${ y }px`)
+        }
     </script>
 </body>
+
 </html>
