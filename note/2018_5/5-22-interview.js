@@ -33,7 +33,7 @@ function throttle(fn, interval) {
             clearTimeout(timer)
             timer = setTimeout(function() {
                 last = now;
-                fn.apply(_this, arguments);
+                fn.apply(_this, args);
             }, interval)
         } else {
             last = now;
@@ -41,3 +41,41 @@ function throttle(fn, interval) {
         }
     }
 }
+
+
+// function debounce(fn, interval) {
+//     var timer;
+//     return function() {
+//         var _this = this;
+//         var args = arguments;
+//         if (timer) {
+//             clearTimeout(timer)
+//         }
+
+//         timer = setTimeout(function() {
+//             timer = null;
+//             fn.apply(_this, args);
+//         }, interval)
+//     }
+// }
+
+
+// function throttle(fn, interval) {
+//     var timer;
+//     interval = interval || 200;
+//     var last;
+//     return function() {
+//         var _this = this;
+//         var args = arguments;
+
+//         var now = +new Date();
+
+//         if (last && now - last < interval) {
+
+//         } else {
+//             last = now;
+//             fn.apply(_this, args);
+//         }
+
+//     }
+// }

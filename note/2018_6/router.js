@@ -219,3 +219,13 @@ constructor(router, base) {
     1. hash模式仅改变hash部分的内容，而hash部分是不会包含在http请求中的（hash带#）：
     http://oursite.com/#/user/id  只会发送http://oursite.com/
 */
+
+
+
+var tmp = 123;
+var mks = 1234;
+if (true) {
+    console.log(mks); // 1234
+    console.log(tmp); // tmp is not defined
+    let tmp;
+}
