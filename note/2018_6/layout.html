@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>布局</title>
+</head>
+
+<body>
+    <script>
+        // 寻找第K大个数，乱序数组arr
+        function getBigNum(arr, K) {
+            if (K === 1) {
+                return Math.min.apply(null,arr);
+            }
+            let left = [], right = [];
+            // 取随机数，这样不会使left和right为空值导致死循环
+            let pivotIndex = ~~(Math.random() * arr.length);
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < arr[pivotIndex]) {
+                    left.push(arr[i])
+                } else {
+                    right.push(arr[i])
+                }
+            }
+
+            // 第一次快排分好组
+            if (left.length === K) {
+                // 表示取数组最大数
+                return Math.max.apply(null,left);
+            }
+
+            if (left.length < K) {
+                K = K - left.length;
+                return getBigNum(right, K);
+            } else {
+                return getBigNum(left, K);
+            }
+        }
+
+        let array = [2, 12, 454, 23, 124, 365, 16, 59, 92, 7]; let K = 4;
+
+
+        console.log(getBigNum(array, 1));
+        console.log(getBigNum(array, 2));
+        console.log(getBigNum(array, 3));
+        console.log(getBigNum(array, 4));
+        console.log(getBigNum(array, 5));
+        console.log(getBigNum(array, 8));
+    </script>
+</body>
+
+</html>
