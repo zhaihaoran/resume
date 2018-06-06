@@ -13,9 +13,10 @@
         // 寻找第K大个数，乱序数组arr
         function getBigNum(arr, K) {
             if (K === 1) {
-                return Math.min.apply(null,arr);
+                return Math.min.apply(null, arr);
             }
-            let left = [], right = [];
+            let left = [],
+                right = [];
             // 取随机数，这样不会使left和right为空值导致死循环
             let pivotIndex = ~~(Math.random() * arr.length);
 
@@ -30,7 +31,7 @@
             // 第一次快排分好组
             if (left.length === K) {
                 // 表示取数组最大数
-                return Math.max.apply(null,left);
+                return Math.max.apply(null, left);
             }
 
             if (left.length < K) {
@@ -41,7 +42,8 @@
             }
         }
 
-        let array = [2, 12, 454, 23, 124, 365, 16, 59, 92, 7]; let K = 4;
+        let array = [2, 12, 454, 23, 124, 365, 16, 59, 92, 7];
+        let K = 4;
 
 
         console.log(getBigNum(array, 1));
@@ -50,6 +52,19 @@
         console.log(getBigNum(array, 4));
         console.log(getBigNum(array, 5));
         console.log(getBigNum(array, 8));
+        // shuffle
+        function shuffle(array) {
+            // copy 一份
+            var _array = array.concat();
+            for (var i = 0; i < _array.length; i++) {
+                var j = Math.floor(Math.random() * _array.length);
+                [_array[i], _array[j]] = [_array[j], _array[i]]
+            }
+            return _array;
+        }
+
+
+        console.log(shuffle([1, 2, 4, 6, 7, 8, 9, 10, 11, 15, 20]));
     </script>
 </body>
 
