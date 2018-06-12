@@ -49,14 +49,11 @@
 
 #### hexo博客  -- [卡布鲁 | 杂食堆](https://zhaihaoran.github.io/)
 
-#### Nextjs 同构应用 -- [ demo ](https://github.com/zhaihaoran/next-admin-demo)
-
-* 采用 Nextjs + React + Mobx + AntDesign + Koa + Mysql 搭建的网站架构雏形，假数据用puer-mock生成，为后期重构和新项目做技术储备。
-
 #### 其他小作品和封装组件
 
 * 俄罗斯方块 --`terris.js` [demo](https://zhaihaoran.github.io/resume/terris.html)
 * 移动端九宫格解锁实现 -- `gesture.js` [demo](https://zhaihaoran.github.io/resume/unlock.html)
+* canvas数字瀑布流 -- [demo](https://zhaihaoran.github.io/digital-rain/)
 
 # 自我评价
 
