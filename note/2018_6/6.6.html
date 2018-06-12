@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>svg</title>
+    <style>
+        .svg-container {
+            width: 500px;
+            height: 500px;
+        }
+
+        .rect {
+            width: 100%;
+            height: 100%;
+            fill: red;
+            /* background 不生效 */
+            /* background: red; */
+            transition: fill .3s ease;
+        }
+
+        .rect:hover {
+            fill: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <svg class="svg-container">
+        <rect class="rect"  />
+        <!-- 通过使用transform来做动画 -->
+        <circle cx="150" transform="translate(30,40)" cy="100" r="80" fill="green" />
+        <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
+    </svg>
+    <img src="./demo.svg" alt="">
+    <img src="./path.svg" alt="">
+    <!-- svg http头 -->
+    <!-- content-type: image/svg+xml -->
+    <svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="Gradient1">
+              <stop class="stop1" offset="0%"/>
+              <stop class="stop2" offset="50%"/>
+              <stop class="stop3" offset="100%"/>
+            </linearGradient>
+            <!-- 表示从y1->y2方向开始渐变  0 红 。1为蓝  0到1结束 -->
+            <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="red"/>
+              <stop offset="50%" stop-color="black" stop-opacity="0"/>
+              <stop offset="100%" stop-color="blue"/>
+            </linearGradient>
+        </defs>
+       
+        <rect id="rect1" x="10" y="10" rx="15" ry="15" width="100" height="100"/>
+        <!-- 实现背景色渐变 -->
+        <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#Gradient2)"/>
+        
+      </svg>
+
+    <!-- pattern和 linearGradient都必须放在defs里使用 -->
+    <!-- svg允许嵌套在svg内部 -->
+    <svg>
+        <svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="Gradient1">
+                  <stop class="stop1" offset="0%"/>
+                  <stop class="stop2" offset="50%"/>
+                  <stop class="stop3" offset="100%"/>
+                </linearGradient>
+                <!-- 表示从y1->y2方向开始渐变  0 红 。1为蓝  0到1结束 -->
+                <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="red"/>
+                  <stop offset="50%" stop-color="black" stop-opacity="0"/>
+                  <stop offset="100%" stop-color="blue"/>
+                </linearGradient>
+            </defs>
+            <rect id="rect1" x="10" y="10" rx="15" ry="15" width="100" height="100"/>
+            <!-- 实现背景色渐变 -->
+            <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#Gradient2)"/>
+        </svg>
+    </svg>
+    <!-- svg里同样可以嵌入图片，image标签 -->
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+        <image x="90" y="-65" width="128" height="146" transform="rotate(45)"
+            xlink:href="https://developer.mozilla.org/media/img/mdn-logo.png"/>
+    </svg>
+
+    <!-- math标签 -->
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow>
+            <msup><mi>a</mi><mn>2</mn></msup>
+            <mo>+</mo>
+            <msup><mi>b</mi><mn>2</mn></msup>
+            <mo>=</mo>
+            <msup><mi>c</mi><mn>2</mn></msup>
+        </mrow>
+    </math>
+</body>
+
+</html>
