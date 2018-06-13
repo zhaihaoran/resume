@@ -65,6 +65,7 @@ function isPureObj(obj) {
 }
 
 console.log(null === null); // true
+console.log(undefined === undefined); // true
 
 
 /* createAssigner */
