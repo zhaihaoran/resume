@@ -56,7 +56,7 @@ new Promise(function(resolve) {
     }
 }).then(function() {
     console.log('执行then函数啦')
-});n 
+});
 
 console.log('代码执行结束');
 

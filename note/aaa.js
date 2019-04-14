@@ -61,3 +61,48 @@ for (var i = 1; i < 10; i++) {
     console.log(tem);
 };
 console.log(2);
+
+
+const mm = [1, 2, 3, 4, 5];
+const list = mm.map(el => {
+    console.log(el);
+});
+console.log('-----')
+const ast = mm.forEach(el => {
+    console.log(el);
+});
+console.log(mm, ' - row')
+console.log(list, ' - map')
+console.log(ast, ' - forEach')
+
+const ma = Math.pow(2, 5);
+const asdd = 2 ** 5;
+console.log(ma) // 32
+console.log(asdd) // 32
+
+const mlk = [2, 3, 4, 5, 1, 8, 5, 1, 12]
+console.log(mlk.includes(3)) // true
+
+let sss = [
+    [1, 2, 3],
+    [1, 2, 3, 4],
+    [5, 1, 9, 12]
+];
+
+sss.forEach(([a1, a2, ...a3]) => {
+    console.log(a1, a2, a3)
+})
+
+// 1 2 [3]
+// 1 2 [3,4]
+// 5 1 [9,12]
+
+// padStart 和 padEnd
+
+console.log('0.00'.padStart(10))
+console.log('10,000.00'.padStart(10))
+console.log('250,000.00'.padStart(10))
+
+console.log('0.00'.padEnd(10, '-:'))
+console.log('10,000.00'.padEnd(10, '-:'))
+console.log('250,000.00'.padEnd(10, '-:'))
