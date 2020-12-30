@@ -227,3 +227,110 @@ var wordBreak = function (s, wordDict) {
 
     return check(s, wordSet, 0)
 };
+
+
+// 70
+var climbStairs = function (n) {
+    var dp = [1, 2];
+    for (var i = 2; i < n; i++) {
+        dp[i] = dp[i - 1] + dp[i - 2]
+    }
+    return dp[n - 1];
+};
+
+// 875
+// 思路：先确定K值的范围，然后从最小往最大递归，直到符合要求为止
+// K 最小值自然是1,最大值为数组中最大值
+// 因为是连续的，我们可以用二分法。
+const piles = [3, 6, 7, 11]; let H = 8;
+var minEatingSpeed = function (piles, H) {
+    let minK = 1;
+    let i = 0;
+    let tempH = 0;
+
+    while (i < piles.length) {
+        const val = Math.ceil(piles[i] / minK);
+        if (val > 1) {
+            tempH += val;
+            if (tempH > H) {
+                minK += 1;
+                i = 0;
+                tempH = 0;
+                continue;
+            }
+            i++;
+            continue;
+        } else {
+            tempH += 1;
+            i++;
+            continue;
+        }
+
+    }
+    return minK;
+};
+
+console.log(minEatingSpeed(piles, H));
+
+// 205
+// 双射关系这种题，维护两个hashMap
+
+var isIsomorphic = function (s, t) {
+    var a = {};
+    var b = {};
+    var l = s.length;
+    for (var i = 0; i < l; ++i) {
+        const x = s[i];
+        const y = t[i];
+        if ((a[x] && a[x] !== y) || (b[y] && b[y] !== x)) {
+            return false;
+        }
+        a[x] = y;
+        b[y] = x;
+    }
+    return true;
+};
+
+console.log(isIsomorphic('egg', 'add'));
+console.log(isIsomorphic('ab', 'aa'));
+console.log(isIsomorphic('foo', 'bar'));
+
+
+/// 647 回文子串
+
+
+
+// 实现compose函数,让函数从右到左完成嵌套
+
+function compose(...fns) {
+    return (...args) => fns.reduceRight((prev, cur) => cur(prev), args)
+}
+
+function a(msg) {
+    return msg + "a";
+}
+function b(msg) {
+    return msg + "b";
+}
+function c(msg) {
+    return msg + "c";
+}
+
+const f = compose(
+    a,
+    b,
+    c
+);
+console.log(f("hello"));
+
+
+// 字符串反转
+function stringRevert(str) {
+    const stack = [];
+    for (let i = 0; i < str.length; i++) {
+        stack.unshift(str[i]);
+    }
+    return stack.join('')
+}
+
+console.log(stringRevert('adasd'));
